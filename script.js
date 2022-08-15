@@ -51,6 +51,9 @@ drawBtn.addEventListener("click", (e) => {
     winner.innerText = "There are no more names to choose from";
   } else {
     winner.innerText = `Winner: ${drawName(scrambledPlayerNames)} 🎉🤑`;
+      const table = document.querySelector("table");
+    table.remove();
+    createTable(uniqueNames, false);
   }
 });
 
